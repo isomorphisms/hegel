@@ -1,0 +1,33 @@
+name: Rocq checks
+
+on:
+  push:
+    paths:
+      - 'rocq/**'
+      - '.github/workflows/rocq.yml'
+  pull_request:
+    paths:
+      - 'rocq/**'
+      - '.github/workflows/rocq.yml'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: coq-community/docker-coq-action@v1
+        with:
+          coq_version: '9.2'
+          ocaml_version: 'default'
+          custom_script: |
+            startGroup "Rocq version"
+              rocq -v
+            endGroup
+            startGroup "Compile adequacy tests"
+              sudo chown -R 1000:1000 .
+              make -C rocq check
+            endGroup
+      - name: Restore workspace ownership
+        if: ${{ always() }}
+        run: sudo chown -R 1001:116 .
