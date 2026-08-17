@@ -28,7 +28,7 @@
   load-bearing assumptions visible.
 *)
 
-From Coq Require Import Classical.
+From Coq Require Import Logic.Classical.
 
 Section GodelOnAnselm.
 
