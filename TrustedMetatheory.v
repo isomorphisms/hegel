@@ -31,7 +31,12 @@ Definition infer_from (premises : list Claim) (claim : Claim) : list Claim :=
   | Atom _ => []
   end.
 
-(* One finite pass: premises plus direct modus-ponens consequences. *)
+(*
+  One finite pass over the original premises. The declarative derives relation
+  may chain modus ponens through newly derived claims, but infer does not feed
+  results from this pass back into the premise list. It is intentionally sound
+  but incomplete for derives.
+*)
 Definition infer (premises : list Claim) : list Claim :=
   premises ++ flat_map (infer_from premises) premises.
 
@@ -88,6 +93,30 @@ Example example_is_derivable :
 Proof.
   apply infer_sound.
   exact example_is_emitted.
+Qed.
+
+(*
+  Atom 2 needs two modus-ponens steps. derives can prove it, while one infer
+  pass emits only Atom 1 because Atom 1 was not an original premise.
+*)
+Definition chained_premises : list Claim :=
+  [ Atom 0;
+    Implies (Atom 0) (Atom 1);
+    Implies (Atom 1) (Atom 2)
+  ].
+
+Example chained_conclusion_is_derivable_but_not_emitted :
+  derives chained_premises (Atom 2) /\
+  ~ In (Atom 2) (infer chained_premises).
+Proof.
+  split.
+  - eapply derives_modus_ponens with (antecedent := Atom 1).
+    + apply derives_premise. simpl. auto.
+    + eapply derives_modus_ponens with (antecedent := Atom 0).
+      * apply derives_premise. simpl. auto.
+      * apply derives_premise. simpl. auto.
+  - simpl.
+    intuition discriminate.
 Qed.
 
 Compute infer example_premises.
