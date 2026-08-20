@@ -1,0 +1,30 @@
+name: Verify Rocq trusted metatheory
+
+on:
+  push:
+    branches:
+      - agent/verify-rocq-trusted-metatheory
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and inspect assumptions
+        uses: rocq-prover/docker-opam-action@v1
+        with:
+          custom_image: rocq/rocq-prover:9.2
+          custom_script: |
+            set -eu
+            audit_dir="$(mktemp -d)"
+            trap 'rm -rf "$audit_dir"' EXIT
+            cp Makefile TrustedMetatheory.v "$audit_dir/"
+            cd "$audit_dir"
+            rocq -v
+            make check
+            cp TrustedMetatheory.v TrustedMetatheoryAudit.v
+            printf '\nPrint Assumptions infer_from_sound.\nPrint Assumptions infer_sound.\n' >> TrustedMetatheoryAudit.v
+            rocq compile TrustedMetatheoryAudit.v
