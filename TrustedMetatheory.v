@@ -13,6 +13,7 @@ Inductive Claim : Type :=
 Definition claim_eq_dec : forall x y : Claim, {x = y} + {x <> y}.
 Proof.
   decide equality.
+  apply Nat.eq_dec.
 Defined.
 
 Inductive derives (premises : list Claim) : Claim -> Prop :=
