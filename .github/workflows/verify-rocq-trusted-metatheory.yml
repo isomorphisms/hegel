@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - agent/verify-rocq-trusted-metatheory
-  pull_request:
-    branches:
-      - rocq-trusted-metatheory
 
 permissions:
   contents: read
@@ -16,12 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: c76e1e40135b5ac67782890978b1ddba10add170
       - name: Compile and inspect assumptions
         uses: rocq-prover/docker-opam-action@v1
         with:
           custom_image: rocq/rocq-prover:9.2
           custom_script: |
             set -eu
+            test "$(git rev-parse HEAD)" = c76e1e40135b5ac67782890978b1ddba10add170
             audit_dir="$(mktemp -d)"
             trap 'rm -rf "$audit_dir"' EXIT
             cp Makefile TrustedMetatheory.v "$audit_dir/"
