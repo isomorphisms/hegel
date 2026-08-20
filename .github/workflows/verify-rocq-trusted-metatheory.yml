@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/verify-rocq-trusted-metatheory
+  pull_request:
+    branches:
+      - rocq-trusted-metatheory
 
 permissions:
   contents: read
