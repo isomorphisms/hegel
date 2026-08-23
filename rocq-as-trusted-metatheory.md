@@ -73,7 +73,9 @@ For Hegel this matters especially. A Rocq development can prove that a formal sy
 
 ## Bowman and the philosophical side
 
-Bowman's account of absolute negativity can supply questions and constraints for candidate formal models: does the model merely represent two opposed fixed terms, or can its notion of determination depend on a relation that transforms the terms themselves? Those are useful tests for a formalization. They should not be smuggled in as axioms and then announced as discoveries.
+Bowman's account of absolute negativity can supply questions and constraints for candidate formal models: does the model begin with fixed relata and merely connect them, or can the relata themselves be constituted through a relational structure in which relation-to-other arises internally from relation-to-self? Those are useful tests for a formalization. They should not be smuggled in as axioms and then announced as discoveries.
+
+The current Lawvere and trusted-inference developments do **not** formalize Bowman's Concept or absolute negativity. The Lawvere work tests a specific categorical proposal about identity and opposition; the inference work checks that an executable procedure respects explicitly stated rules. Both are useful formal machinery, but neither yet models Bowman's stronger claim that the relational structure is metaphysically prior to the relata it constitutes.
 
 ## Why Rocq rather than only a dependent programming language
 

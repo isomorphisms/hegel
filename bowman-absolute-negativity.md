@@ -1,6 +1,6 @@
 # Brady Bowman — *Hegel and the Metaphysics of Absolute Negativity*
 
-> **Status: provisional.** This is a working reconstruction of Bowman's argument, not a substitute for a close reading and not a claim that every formulation below is Bowman's own. It is based primarily on Bowman's introduction and the book's structure, checked against Dean Moyar's detailed review. It should be revised chapter by chapter against the text.
+> **Status: source-checked, still interpretive.** This is a working reconstruction of Bowman's argument, not a substitute for a close reading and not a claim that every formulation below is Bowman's own. It has now been checked directly against the book, especially Chapters 1, 5, 6, and 7. Interpretive formulations remain marked as such and should not be treated as quotations from Bowman or Hegel.
 
 Brady Bowman's central claim is that two notoriously difficult Hegelian ideas — **the Concept** and **absolute negativity** — are really two aspects of one thing. The Concept is the structure viewed statically; absolute negativity is the same reality viewed dynamically, as the process by which distinctions and determinations arise. On this reading, Hegel is not merely giving an unusual theory of human reasoning. He is making a metaphysical claim about the structure that is common to thought and being.
 
@@ -64,17 +64,17 @@ For Spinoza, there is a problem about how one substance gives rise to genuinely 
 
 Bowman's Hegel tries to solve both with the same structure. Substance must also be subject. Being must contain within itself the differentiation necessary for being known, while knowing must itself be a determination of being rather than an alien activity added from outside.
 
-Chapter 6 is therefore crucial. Bowman reconstructs Hegel's speculative "logic of content" through the older distinction between formal and objective reality. Very roughly: reality as independently existent and reality as represented content cannot ultimately be two unrelated orders. Their difference must itself be generated within one process. Truth is not a bridge built afterward between two already separate worlds; the possibility of truth belongs to the structure by which the distinction between being and representation arises.
+Chapter 6 is therefore crucial. Bowman reconstructs Hegel's speculative "logic of content" through the older distinction between formal and objective reality. Very roughly: the being something has in itself and the being it has as representational content cannot ultimately constitute two unrelated orders. Ideas themselves also have formal reality insofar as they actually exist as modes of thinking, so "formal reality" should not be read simply as "mind-independent reality." Their difference must itself be generated within one process. Truth is not a bridge built afterward between two already separate worlds; the possibility of truth belongs to the structure by which the distinction between being and representation arises.
 
 This is why Bowman's Hegel can be both a realist and an idealist. The natural world is not invented by finite minds, but the deepest structure of reality is also the structure that makes intelligibility and cognition possible. The idealism is therefore non-psychological.
 
-## Negation is logically prior to affirmation
+## Negation is systematically prior to affirmation
 
 Bowman's final chapter places Hegel in the history of theories of negation. Using Lawrence Horn's distinction, he argues that Hegel does not treat affirmation and negation as two equally primitive operations, nor does he treat negation as merely derivative from an already positive reality.
 
 Bowman's label is **negative asymmetricalism**: affirmation and ordinary determinate negation are both ultimately dependent on absolute negativity. The negative is not an exception occurring inside an independently positive world; the positive itself is generated through the self-relation of negativity.
 
-That formulation should be handled carefully. Bowman does not thereby replace classical logic with a usable formal calculus of "absolute negation." Near the end he treats the doctrine more as a metaphysical hypothesis about the relation of thought and reality, articulated through logical resources that it cannot simply discard.
+That priority should not be confused with the claim that Hegel can simply dispense with ordinary logical resources. Bowman does not replace classical logic with a usable formal calculus of "absolute negation." His reconstruction of autonomous negation still employs ordinary negation, identity, a modified double-negation principle, and non-contradiction. Near the end he treats the doctrine more as a metaphysical hypothesis about the relation of thought and reality: classical logical resources function as means of articulation without thereby serving as the metaphysical foundation of the account.
 
 ## What I think is most useful here
 
@@ -98,4 +98,4 @@ Those objections do not destroy the reconstruction. They identify the exact plac
 
 Brady Bowman, *Hegel and the Metaphysics of Absolute Negativity*, Cambridge University Press, 2013.
 
-For this provisional reconstruction I used Bowman's introduction and published table of contents, together with Dean Moyar's review in *Notre Dame Philosophical Reviews* (2013). The next revision should be made directly against each chapter, especially Chapters 1, 5, 6, and 7.
+This reconstruction was initially based on Bowman's introduction, the published table of contents, and Dean Moyar's review in *Notre Dame Philosophical Reviews* (2013). It has now been checked directly against the book, with particular attention to Chapters 1, 5, 6, and 7. The 2013 date is the book's original publication date; later electronic-edition metadata may show a later year.
